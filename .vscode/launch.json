@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ROS: add_two_ints_server",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "calculator.service",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "ROS: add_two_ints_client 12 30",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "calculator.client",
+      "args": ["12", "30"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "ROS: talker",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "calculator.publisher",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "pytest (no ROS)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["test/test_arithmetic.py", "test/test_cli.py", "-v"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}
